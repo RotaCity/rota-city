@@ -4,14 +4,50 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card (click)="goToPageCircuitos()">
+          <img src="assets/imgs/circuito.jpg">
+          <div class="card-title">Circuitos</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card>
+          <img src="assets/imgs/praia.jpg">
+          <div class="card-title">Praias</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card>
+          <img src="assets/imgs/hospedagem.jpg">
+          <div class="card-title">Hospedagem</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card>
+          <img src="assets/imgs/restaurante.jpg">
+          <div class="card-title">Restaurantes</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card>
+          <img src="assets/imgs/tipica.jpg">
+          <div class="card-title">Comidas Típicas</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card>
+          <img src="assets/imgs/lugares.jpg">
+          <div class="card-title">Locais</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
