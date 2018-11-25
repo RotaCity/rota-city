@@ -12,6 +12,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ListaCircuitosPageModule } from '../pages/lista-circuitos/lista-circuitos.module';
 import { ListaNewsPageModule } from '../pages/lista-news/lista-news.module';
+import { IntroPageModule } from '../pages/intro/intro.module';
+import { SlideIntroProvider } from '../providers/slide-intro/slide-intro';
+import { ServicosProvider } from '../providers/servicos/servicos';
+import { HttpModule } from '@angular/http';
+import { ListaPraiasPageModule } from '../pages/lista-praias/lista-praias.module';
+import { ListaHospedagensPageModule } from '../pages/lista-hospedagens/lista-hospedagens.module';
+import { ListaRestaurantesPageModule } from '../pages/lista-restaurantes/lista-restaurantes.module';
+import { ListaComidasTipicasPageModule } from '../pages/lista-comidas-tipicas/lista-comidas-tipicas.module';
+import { ListaLocaisPageModule } from '../pages/lista-locais/lista-locais.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +34,14 @@ import { ListaNewsPageModule } from '../pages/lista-news/lista-news.module';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     ListaCircuitosPageModule,
-    ListaNewsPageModule
+    ListaNewsPageModule,
+    IntroPageModule,
+    ListaPraiasPageModule,
+    ListaHospedagensPageModule,
+    ListaRestaurantesPageModule,
+    ListaComidasTipicasPageModule,
+    ListaLocaisPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,7 +54,9 @@ import { ListaNewsPageModule } from '../pages/lista-news/lista-news.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SlideIntroProvider,
+    ServicosProvider
   ]
 })
 export class AppModule {}
